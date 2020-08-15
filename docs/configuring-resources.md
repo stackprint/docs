@@ -42,13 +42,13 @@ Authenticating requests with JSON Web Tokens has to be configured when [creating
 
 #### Identities
 
-After a valid API key or JWT has been found for an incoming request to your Stackprint API, either are mapped to an Identity. Identities contain basic information on the subject that made the request. Identities contain the collowing fields:
+After a valid API key or JWT has been found for an incoming request to your Stackprint API, either are mapped to an Identity. Identities contain basic information on the user that made the request. Identities contain the collowing fields:
 
-`user` The subject's user id.
+`user` The user id.
 
-`organisation` The id of the organisation the subject is part of.
+`organisation` The id of the organisation the user is part of.
 
-`admin` Whether or not the subject is an administrator.
+`admin` Whether or not the user is an administrator.
 
 For an admin API key the associated Identity looks like this:
 
@@ -60,9 +60,9 @@ admin: true
 
 For JSON Web Tokens, the Identity is being determined based on the token's [claims](https://auth0.com/docs/tokens/concepts/jwt-claims) and the [Identity field mapping](creating-an-api.md#identity-fields) that has been provided when creating your API.
 
-The purpose of Identities is to be able to define authorization rules for your resources independently from the authentication method that a subject has been using.
+The purpose of Identities is to be able to define authorization rules for your resources independently from the authentication method that a user has been using.
 
-After determining the Identity of the subject making a request to your API, it is being checked against the resource's authorization rules. If the Identity satisfies a rule, the request succeeds.
+After determining the Identity of the user making a request to your API, it is being checked against the resource's authorization rules. If the Identity satisfies a rule, the request succeeds.
 
 ### API Descriptor
 
@@ -161,21 +161,21 @@ The authorization configuration for the resource.
 
 #### The Authorization object
 
-The authorization object holds configuration that determines how subjects are authorized to perform operations on objects of this resource.
+The authorization object holds configuration that determines how users are authorized to perform operations on objects of this resource.
 
 ##### Attributes:
 
 ###### rules <AttributeType>array of [Authorization Rule](#the-authorization-rule-object)</AttributeType>
 
-This array contains rules that determine which subjects can perform operations on resource objects.
+This array contains rules that determine which users can perform operations on resource objects.
 
-For a subject to be allowed to perform an operation on an object, the conditions of at least one rule granting permission to perform that operation need to be fulfilled for the subject.
+For a user to be allowed to perform an operation on an object, the conditions of at least one rule granting permission to perform that operation need to be fulfilled for the user.
 
 #### The Authorization Rule object
 
-An authorization rule specifies under which conditions a subject will be granted access to perform certain operations on resource objects.
+An authorization rule specifies under which conditions a user will be granted access to perform certain operations on resource objects.
 
-Rules are specified based on a subject's Identity which is determined either from an API key or JWT included in a request and the [Identity fields](creating-an-api.md#identity-fields) specified during API creation.
+Rules are specified based on a user's Identity which is determined either from an API key or JWT included in a request and the [Identity fields](creating-an-api.md#identity-fields) specified during API creation.
 
 Example:
 
@@ -189,13 +189,13 @@ operations: all
 
 ###### allow <AttributeType>string</AttributeType>
 
-Determines which subjects this rule applies for. Valid values are:
+Determines which users this rule applies for. Valid values are:
 
-`user` The rule applies to a single subject.
+`user` The rule applies to a single user.
 
 `organisation` The rule applies to all subhects of an organisation.
 
-`authenticated` The rule applies to all authenticated subjects.
+`authenticated` The rule applies to all authenticated users.
 
 `admin` The rule only applies to administrators.
 
@@ -205,7 +205,7 @@ Determines which subjects this rule applies for. Valid values are:
 
 Only required if **allow** is either `user` or `organisation`.
 
-Specifies which object property contains the user id or organisation id. That value will be compared against the value of the subject's Identity.
+Specifies which object property contains the user id or organisation id. That value will be compared against the value of the user's Identity.
 
 Example: `author`
 
@@ -213,12 +213,12 @@ Example: `author`
 
 The operations to allow on resource objects. Can either be `all` to gratn access to all operations or an array containing the following values:
 
-`create` Allow the subject to create new objects.
+`create` Allow creating new objects.
 
-`read` Allow the subject to read objects.
+`read` Allow reading objects.
 
-`update` Allow the subject to update objects.
+`update` Allow updating objects.
 
-`delete` Allow the subject to delete objects.
+`delete` Allow deleting objects.
 
 If you're experiencing any issues when configuring resources through the API Descriptor, please [let us know](mailto:support@stackprint.io).
