@@ -193,7 +193,7 @@ Determines which users this rule applies for. Valid values are:
 
 `user` The rule applies to a single user.
 
-`organisation` The rule applies to all subhects of an organisation.
+`organisation` The rule applies to all users of an organisation.
 
 `authenticated` The rule applies to all authenticated users.
 
