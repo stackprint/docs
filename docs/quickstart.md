@@ -32,7 +32,7 @@ After the deployment has completed, you'll see a modal with useful commands to t
 curl -H "Content-Type: application/json" \
     -H "API-Key: <your api key>" \
     -d "{ \"author\": \"example-author\", \"text\": \"example-text\" }" \
-    https://p.stackprint.io/<your-api-path>/notes
+    https://apis.stackprint.io/<your-api-path>/notes
 ```
 
 - List all personal notes:
@@ -40,7 +40,7 @@ curl -H "Content-Type: application/json" \
 ```bash
 curl -H "Accept: application/json" \
     -H "API-Key: <your api key>" \
-    https://p.stackprint.io/<your-api-path>/notes
+    https://apis.stackprint.io/<your-api-path>/notes
 ```
 
 That's it! You have successfully built and deployed your first API with Stackprint and created your first object.

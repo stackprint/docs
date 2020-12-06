@@ -17,7 +17,7 @@ Example:
 ```bash
 curl -H "Accept: application/json" \
     -H "API-Key: <api key>" \
-    https://p.stackprint.io/<api-path>/notes/<id>
+    https://apis.stackprint.io/<api-path>/notes/<id>
 ```
 
 ### JSON Web Tokens
@@ -29,7 +29,7 @@ Example:
 ```bash
 curl -H "Accept: application/json" \
     -H "Authorization: Bearer <token>" \
-    https://p.stackprint.io/<api-path>/notes/<id>
+    https://apis.stackprint.io/<api-path>/notes/<id>
 ```
 
 ## Create an object
@@ -38,7 +38,7 @@ curl -H "Accept: application/json" \
 curl -H "Content-Type: application/json" \
     -H "API-Key: <api key>" \
     -d "{ \"text\": \"Hello from Stackprint!\", \"author\": \"me\" }" \
-    https://p.stackprint.io/<api-path>/notes
+    https://apis.stackprint.io/<api-path>/notes
 ```
 
 ## Get an object
@@ -46,7 +46,7 @@ curl -H "Content-Type: application/json" \
 ```bash
 curl -H "Accept: application/json" \
     -H "API-Key: <api key>" \
-    https://p.stackprint.io/<api-path>/notes/<id>
+    https://apis.stackprint.io/<api-path>/notes/<id>
 ```
 
 ## List objects
@@ -54,7 +54,7 @@ curl -H "Accept: application/json" \
 ```bash
 curl -H "Accept: application/json" \
     -H "API-Key: <api key>" \
-    https://p.stackprint.io/<api-path>/notes
+    https://apis.stackprint.io/<api-path>/notes
 ```
 
 ### Filter
@@ -62,7 +62,7 @@ curl -H "Accept: application/json" \
 ```bash
 curl -G -H "Accept: application/json" \
     -H "API-Key: <api key>" \
-    https://p.stackprint.io/<api-path>/notes \
+    https://apis.stackprint.io/<api-path>/notes \
     -d author=me
 ```
 
@@ -71,7 +71,7 @@ curl -G -H "Accept: application/json" \
 ```bash
 curl -G -H "Accept: application/json" \
  -H "API-Key: <api key>" \
- https://p.stackprint.io/<api-path>/notes \
+ https://apis.stackprint.io/<api-path>/notes \
  -d sort=author:asc
 ```
 
@@ -80,7 +80,7 @@ curl -G -H "Accept: application/json" \
 ```bash
 curl -G -H "Accept: application/json" \
  -H "API-Key: <api key>" \
- https://p.stackprint.io/<api-path>/notes \
+ https://apis.stackprint.io/<api-path>/notes \
  -d offset=1 \
  -d limit=1
 ```
@@ -91,7 +91,7 @@ curl -G -H "Accept: application/json" \
 curl -X PUT -H "Content-Type: application/json" \
     -H "API-Key: <api key>" \
     -d "{ \"text\": \"Hi from Stackprint!\", \"author\": \"me\" }" \
-    https://p.stackprint.io/<api-path>/notes/<id>
+    https://apis.stackprint.io/<api-path>/notes/<id>
 
 ```
 
@@ -100,5 +100,5 @@ curl -X PUT -H "Content-Type: application/json" \
 ```bash
 curl -X DELETE -H "Accept: application/json" \
     -H "API-Key: <api key>" \
-    https://p.stackprint.io/<api-path>/notes/<id>
+    https://apis.stackprint.io/<api-path>/notes/<id>
 ```
