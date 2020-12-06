@@ -1,7 +1,7 @@
 module.exports = {
   someSidebar: {
     Introduction: ["welcome", "quickstart"],
-    "Building an API": ["creating-an-api", "configuring-resources"],
+    "Building an API": ["creating-an-api", "configuring-your-api"],
     "Using your API": [
       "connecting-with-curl",
       "connecting-from-angular",

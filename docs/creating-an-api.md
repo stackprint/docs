@@ -16,7 +16,7 @@ This is the API name that will be shown on your [Stackprint Dashboard](https://c
 
 #### Path
 
-The entered path determines under which URL your API will be available once it has been deployed. The URL pattern for Stackprint APIs is `https://p.stackprint.io/<your api path>`. The chosen path needs to be unique.
+The entered path determines under which URL your API will be available once it has been deployed. The URL pattern for Stackprint APIs is `https://apis.stackprint.io/<your api path>`. The chosen path needs to be unique.
 
 ## Authentication
 
@@ -46,13 +46,13 @@ If you have chosen an asynchronous signing algorithm such as RS256, you need to 
 
 If you have chosen a synchronous signing algorithm such as HS256, you need to provide the secret that is being used by your token provider to sign JWTs. Stackprint needs the secret to verify that JWTs of incoming requests have actually been issued by your token provider.
 
-### Identity fields
+### User properties
 
-Identity fields determine which fields of the JWT's [claims](https://auth0.com/docs/tokens/concepts/jwt-claims) map to Stackprint's Identity fields that can later be used for configuring [authorization rules](configuring-resources.md#the-authorization-rule-object).
+The configuration in this sections determines which fields of the JWT [claims](https://auth0.com/docs/tokens/concepts/jwt-claims) map to predefined user properties that can be used for configuring [permissions](configuring-your-api.md#permissions).
 
 #### User
 
-Enter the JWT claims field that represents the user id. When using the default JWT format the value here should be `sub`.
+Enter the JWT claims field that represents the user's unique identifier. When using the default JWT format the value here should be `sub`.
 
 #### Organisation
 
