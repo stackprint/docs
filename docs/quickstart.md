@@ -10,17 +10,17 @@ In this section you'll learn how to quickly build and deploy your first REST API
 
 - On your [Stackprint Dashboard](https://console.stackprint.io) click **Create my first API**
 - Enter a name for your API and a unique path
-- Click **Submit** to create the API
+- Click **Continue** to create the API
 
 ![Create an API](/img/getting-started/create-an-api.png)
 
-## Configure resources
+## Configure the API
 
-On the next screen you'll be able to configure the resources that your API will manage by providing an [API Descriptor](configuring-resources.md#api-descriptor). On the right you'll see a live preview of the endpoints that will be created. The default API Descriptor defines a `Note` resource with three properties and an authorization rule that only allows the author of a note full access.
+On the next screen you'll be able to configure the object types that your API will manage through our API Editor. The default configuration defines a `Note` resource with three properties and a permission rule that only allows the author of a note full access.
 
-- Click **Deploy** to deploy your API with the default API Descriptor
+- Click **Deploy** to deploy your API with the default configuration
 
-![Configure resources](/img/getting-started/configure-resources.png)
+![Configure your API](/img/getting-started/configure-resources.png)
 
 ## Test your API
 
@@ -45,4 +45,4 @@ curl -H "Accept: application/json" \
 
 That's it! You have successfully built and deployed your first API with Stackprint and created your first object.
 
-In the following sections you'll learn more about creating APIs that support JWT authentication, configuring custom resources and supporting more complex access scenarios.
+In the following sections you'll learn more about creating APIs that support JWT authentication, configuring custom object types and supporting more complex access scenarios.

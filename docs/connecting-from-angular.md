@@ -4,7 +4,7 @@ title: Connecting from Angular Apps
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-In this section you'll learn how to connect to your Stackprint API from [Angular](https://angular.io) apps with generated client code. The shown code examples are based on generated client code for an API deployed from the default API Descriptor and the **Note** resource. For your API and resources, the names of services, functions and parameters will likely be different.
+In this section you'll learn how to connect to your Stackprint API from [Angular](https://angular.io) apps with generated client code. The shown code examples are based on generated client code for an API deployed from the default API configuration and the **Note** resource. For your API and object types, the names of services, functions and parameters will likely be different.
 
 :::note
 Generated client code is compatible with Angular 9.0.0+. Please make sure to upgrade your project if you're still using an older version of Angular.
@@ -31,7 +31,7 @@ import { ApiModule } from 'gen/typescript-angular-client';
 })
 ```
 
-- In any component you can now inject generated services for managing different resources:
+- In any component you can now inject generated services for managing different object types:
 
 ```typescript
 import { NoteService } from 'gen/typescript-angular-client';

@@ -8,7 +8,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 We believe that when you have limited time to build an app or you're creating an MVP to test the market, you should not spend your time coding another REST API yourself. Your time is better spent working on what makes your app stand out.
 
-That's why Stackprint allows you to build REST APIs by just connecting with your authentication provider and configuring the data that your API will manage using a simple YAML format. Deployments happen with one click.
+That's why Stackprint allows you to build REST APIs by just connecting with your authentication provider and configuring the data that your API will manage using our intuitive API Editor. Deployments happen with one click.
 
 ![Build REST APIs fast with Stackprint](/img/getting-started/configure-resources.png)
 

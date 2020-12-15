@@ -6,7 +6,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-In this section you'll learn how to connect to your Stackprint API from [React](https://reactjs.org) apps with generated client code. The shown code examples are based on generated client code for an API deployed from the default API Descriptor and the **Note** resource. For your API and resources, the names of services, functions and parameters will likely be different.
+In this section you'll learn how to connect to your Stackprint API from [React](https://reactjs.org) apps with generated client code. The shown code examples are based on generated client code for an API deployed from the default API configuration and the **Note** resource. For your API and object types, the names of services, functions and parameters will likely be different.
 
 A full example React application that connects to a Stackprint API can be found on [GitHub](https://github.com/stackprint/example-notes-react).
 
