@@ -6,6 +6,7 @@ module.exports = {
       "connecting-with-curl",
       "connecting-from-angular",
       "connecting-from-react",
+      "connecting-with-go"
     ],
   },
 };
